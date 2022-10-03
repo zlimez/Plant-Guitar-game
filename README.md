@@ -1,10 +1,10 @@
-# Title of task
+# Open-Ended Plant Minigame
 
 ## :information_source: Introduction
-
+This is an open-ended task which tests your game development skills across the spectrum of game design, coding, and even working with art and assets. As you may know, Floramis is a startup that aims to turn plants into social experiences. One of the ways we do this is through minigames which tie into the idea of gamifying plant care.
 
 ## :dart: Task
-
+Your task is to develop *any* plant-related Unity minigame that you deem would be interesting and engaging for users of the Floramis app. This game should have a short but engaging gameplay loop that ensures replayability. Given that this is quite an open-ended task, we do not expect you to create original assets and SFX so please feel free to use existing asset libraries on the web ([example](https://www.kenney.nl/)) or on the Unity asset store to create this game. Due to the short timespan of this task, try to focus your efforts on functionality over form. Otherwise, let your creativity shine through using this project!
 
 ## :package: Resources/Assets Allowed
 You are allowed to use as many or as little external resources as you require. However, you must:
