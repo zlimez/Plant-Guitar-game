@@ -12,7 +12,7 @@ public class LevelManager : MonoBehaviour
     public static float CLIMAX_SPAWN_INTERVAL = 0.2f;
     private static float TIME_PASSED = 0;
     // All alien variation prefabs
-    public static GameObject[] aliens;
+    public GameObject[] aliens;
 
     public AlienDistribution generateAlienDistribution() {
         // Need to ensure all aliens can be defeated

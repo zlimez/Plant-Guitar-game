@@ -10,7 +10,11 @@ public class BoardManager : MonoBehaviour
     // Initial time interval for generating new alien decreases th
     public float timeInterval;
     public AlienDistribution alienDistribution;
+
     // Start is called before the first frame update
+    void Start() {
+        timeInterval = LevelManager.GetNextSpawnInterval();
+    }
 
     // Update is called once per frame
     void Update()

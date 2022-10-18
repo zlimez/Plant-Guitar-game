@@ -5,8 +5,11 @@ using UnityEngine;
 
 public class GuitarPlaying : Guitar
 {
+    // These two fields serve to bridge dictionary and unity inspector
+    public Chords[] chords;
+    public GameEvent[] chordEvents;
     // All valid chords and the respective event they trigger when played
-    public Dictionary<Chords, GameEvent> chordEventMapper = new Dictionary<Chords, GameEvent>();
+    private Dictionary<Chords, GameEvent> chordEventMapper = new Dictionary<Chords, GameEvent>();
     // Keeps the most recent three notes played
     public Queue<Notes> notesPlayed = new Queue<Notes>();
     public Queue<double> notesTimeSig = new Queue<double>();

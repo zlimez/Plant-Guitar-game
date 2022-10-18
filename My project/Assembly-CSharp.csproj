@@ -54,6 +54,7 @@
      <Compile Include="Assets/Scripts/GameManager.cs" />
      <Compile Include="Assets/Scripts/Guitar/StringPlucker.cs" />
      <Compile Include="Assets/Scripts/Misc/Utilities.cs" />
+     <Compile Include="Assets/Scripts/Character/Movement.cs" />
      <None Include="Assets/Shader/SH Sprite Shadow.shader" />
      <None Include="Assets/Shader/SH Sprite Shadow Mask.shader" />
     <Reference Include="UnityEngine">
