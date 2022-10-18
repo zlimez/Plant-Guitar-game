@@ -7,5 +7,6 @@ public class Strings : ScriptableObject
 {
     public Notes note;
     public AudioClip clip;
+    public Sprite image;
     public GameEvent NotePlayed;
 }
