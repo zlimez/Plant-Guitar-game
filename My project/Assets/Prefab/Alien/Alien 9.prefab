@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1620175882025828538}
   - component: {fileID: 4669451622121809820}
   - component: {fileID: 5066668322806458462}
+  - component: {fileID: 8816181150990606784}
   m_Layer: 0
   m_Name: Alien 9
   m_TagString: Enemy
@@ -47,8 +48,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weakness: {fileID: 11400000, guid: a30f9a2ec3f71499ea23798874e87284, type: 2}
+  attackStats: 10
   health: {fileID: 5066668322806458462}
-  movingSpeed: 2
+  baseHealth: {fileID: 0}
 --- !u!114 &5066668322806458462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63,6 +65,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   death: {fileID: 0}
   health: 100
+--- !u!114 &8816181150990606784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4944571430036218573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22b818939dbc44ddca43a7c11ec59ca9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movingSpeed: 1
+  moveDirection: {x: 0, y: 0, z: 0}
+  turnPoint: {x: 0, y: 0, z: 0}
+  minDistToClear: 1
 --- !u!1 &7940505877264916379
 GameObject:
   m_ObjectHideFlags: 0
@@ -88,7 +106,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7940505877264916379}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.54, y: 3.07, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []

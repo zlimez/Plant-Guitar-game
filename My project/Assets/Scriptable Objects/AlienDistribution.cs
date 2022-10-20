@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class AlienDistribution : MonoBehaviour
+public class AlienDistribution
 {
     // From alien with highest spawn probability to lowest
     public GameObject[] aliens;

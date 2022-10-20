@@ -5,23 +5,27 @@ using UnityEngine;
 public class Alien : MonoBehaviour
 {
     public Weakness weakness;
+    public float attackStats;
     public Health health;
-    public float movingSpeed;
     
     void Start() {
         health = GetComponent<Health>();
     }
 
-    void Update() {
-        // Move downwards
-        transform.position += new Vector3(0, movingSpeed, 0) * Time.deltaTime;
+    public void reactToAttack(bool isMajor) {
+        Debug.Log(gameObject.name + " health deducted");
+        if (isMajor) {
+            health.deductHealth(weakness.majorHealthDeduction);
+        } else {
+            health.deductHealth(weakness.minorHealthDeduction);
+        }
     }
 
-    void reactToChord() {
-        if (LevelManager.CHORD_PLAYED == weakness.majorWeakness) {
-            health.deductHealth(weakness.majorHealthDeduction);
-        } else if (LevelManager.CHORD_PLAYED == weakness.minorWeakness) {
-            health.deductHealth(weakness.minorHealthDeduction);
+    void OnTriggerEnter2D(Collider2D obj) {
+        Debug.Log(obj.name + " collided");
+        if (obj.CompareTag("Player")) {
+            Destroy(gameObject);
+            obj.GetComponent<Health>().deductHealth(attackStats);
         }
     }
 }

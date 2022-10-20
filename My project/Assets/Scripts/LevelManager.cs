@@ -2,15 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// All the meta info about the level is stored here
 public class LevelManager : MonoBehaviour
 {
     public static bool TIMER_START;
     public static Chords CHORD_PLAYED;
-    public static int ALIEN_TYPES_PER_LEVEL = 4;
-    public static float LEVEL_DURATION = 240;
-    public static float INITIAL_SPAWN_INTERVAL = 2;
-    public static float CLIMAX_SPAWN_INTERVAL = 0.2f;
     private static float TIME_PASSED = 0;
+    public int alienTypes = 4;
+    public float levelDuration = 240;
+    public float initialSpawnInterval = 2;
+    public float climaxSpawnInterval = 0.2f;
+    // Survival based
+    public GameEvent levelComplete;
     // All alien variation prefabs
     public GameObject[] aliens;
 
@@ -22,14 +25,21 @@ public class LevelManager : MonoBehaviour
         // the two main enemies main weakness chords. Hence 6 strings in the guitar set will always be sufficient.
         // Build the corresponding data structure above.
         
-        return new AlienDistribution(null, null);
+        // Dummy 
+        return new AlienDistribution(new GameObject[] {aliens[0], aliens[1], aliens[2], aliens[3]}, new float[] {25, 50, 75, 100});
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (TIMER_START) {
-            TIME_PASSED += Time.deltaTime;
+        if (TIME_PASSED >= levelDuration) {
+            // Level ended
+            StopTimer();
+            levelComplete.TriggerEvent();
+        } else {
+            if (TIMER_START) {
+                TIME_PASSED += Time.deltaTime;
+            }
         }
     }
 
@@ -45,12 +55,12 @@ public class LevelManager : MonoBehaviour
         TIME_PASSED = 0;
     }
 
-    public static float GetNextSpawnInterval() {
+    public float GetNextSpawnInterval() {
         // Interpolate the two intervals according to time passed in the level
-        if (TIME_PASSED <= LEVEL_DURATION / 2) {
-            return INITIAL_SPAWN_INTERVAL - (INITIAL_SPAWN_INTERVAL - CLIMAX_SPAWN_INTERVAL) * (TIME_PASSED / (LEVEL_DURATION / 2));
+        if (TIME_PASSED <= levelDuration / 2) {
+            return initialSpawnInterval - (initialSpawnInterval - climaxSpawnInterval) * (TIME_PASSED / (levelDuration / 2));
         } else {
-            return CLIMAX_SPAWN_INTERVAL + (INITIAL_SPAWN_INTERVAL - CLIMAX_SPAWN_INTERVAL) * (TIME_PASSED - (LEVEL_DURATION / 2)) / (LEVEL_DURATION / 2);
+            return climaxSpawnInterval + (initialSpawnInterval - climaxSpawnInterval) * (TIME_PASSED - (levelDuration / 2)) / (levelDuration / 2);
         }
        
     }

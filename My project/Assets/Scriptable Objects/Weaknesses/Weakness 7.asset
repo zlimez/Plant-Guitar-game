@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   majorWeakness: {fileID: 11400000, guid: 1cd8cee2ab8e04190984a5b34742b8a8, type: 2}
   majorHealthDeduction: 20
-  minorWeakness: {fileID: 0}
+  minorWeakness: {fileID: 11400000, guid: becdeac585e7041cf84ca82eba674252, type: 2}
   minorHealthDeduction: 10

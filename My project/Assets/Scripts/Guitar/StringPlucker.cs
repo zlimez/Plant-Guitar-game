@@ -6,7 +6,7 @@ public class StringPlucker : MonoBehaviour
 {
     public AudioSource amp;
     public SpriteRenderer stringRenderer;
-    private Strings thisString;
+    public Strings thisString;
 
     public void PlayNote() {
         amp.PlayOneShot(thisString.clip);

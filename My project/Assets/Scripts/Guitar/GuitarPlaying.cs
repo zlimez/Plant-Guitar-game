@@ -16,10 +16,16 @@ public class GuitarPlaying : Guitar
     // First and last note of a chord must be played within the time frame to be considered as a chord
     public float timeFrame;
 
+    void Awake() {
+        for (int i = 0; i < chords.Length; i++) {
+            chordEventMapper[chords[i]] = chordEvents[i];
+        }
+    }
+
     void Start() {
-        this.strings = GameManager.STRINGS;
+        // this.strings = GameManager.STRINGS;
         for (int i = 0; i < GameManager.STRINGS.Length; i++) {
-            stringObjects[i].GetComponent<StringPlucker>().AssignString(GameManager.STRINGS[i]);
+            stringObjects[i].GetComponent<StringPlucker>().AssignString(strings[i]);
         }
     }
 
@@ -80,7 +86,9 @@ public class GuitarPlaying : Guitar
     public void DetermineChord() {
         // From the notes played in the last interval determine the chord played an emit the corresponding event
         List<Notes> sortedNotes = new List<Notes>(notesPlayed.ToArray());
-        Chords rawChord = new Chords(sortedNotes[0], sortedNotes[1], sortedNotes[2]);
+        sortedNotes.Sort();
+        Chords rawChord = Chords.Of(sortedNotes[0], sortedNotes[1], sortedNotes[2]);
+        Debug.Log(sortedNotes[0] + " " + sortedNotes[1] + " " + sortedNotes[2]);
         if (chordEventMapper.ContainsKey(rawChord)) {
             chordEventMapper[rawChord].TriggerEvent();
             notesPlayed.Clear();

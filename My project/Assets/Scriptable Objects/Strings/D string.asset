@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 934c0e9f6907f4e5997db3c461a29a50, type: 3}
   m_Name: D string
   m_EditorClassIdentifier: 
-  note: 1
-  clip: {fileID: 0}
+  note: 2
+  clip: {fileID: 8300000, guid: 44cb46bad49d54f52b9358861d042e35, type: 3}
   image: {fileID: -588217822, guid: 59e4381b91e954548b6ec79d7f7f6ad1, type: 3}
   NotePlayed: {fileID: 11400000, guid: ad5631ed6840849f582ecd37c7b6dbe5, type: 2}
