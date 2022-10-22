@@ -21,7 +21,7 @@ public class BlobGenerator : MonoBehaviour
     void Update()
     {
         if (timeInterval <= 0) {
-            Debug.Log("Generating new blob");
+            // Debug.Log("Generating new blob");
             Instantiate(blob, spawnPoint, Quaternion.identity);
             GenerateNextInterval();
         } else {

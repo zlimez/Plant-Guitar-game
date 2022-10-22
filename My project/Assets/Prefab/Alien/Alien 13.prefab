@@ -50,7 +50,6 @@ MonoBehaviour:
   weakness: {fileID: 11400000, guid: 8bfb907deed534ed1a52e7505902cea9, type: 2}
   attackStats: 10
   health: {fileID: 5298970782095670417}
-  baseHealth: {fileID: 0}
 --- !u!114 &5298970782095670417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -153,7 +152,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1154854981
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300018, guid: 0430600dfe1dcf246b1f1324fe8be4d4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

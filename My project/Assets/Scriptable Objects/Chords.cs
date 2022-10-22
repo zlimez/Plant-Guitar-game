@@ -1,4 +1,5 @@
 using UnityEngine;
+using System;
 
 [CreateAssetMenu(menuName = "Chord")]
 public class Chords : ScriptableObject
@@ -22,7 +23,7 @@ public class Chords : ScriptableObject
 
     public override int GetHashCode() {
         // This is to support Chord finding with notes in @code Guitar
-        return rootNote.GetHashCode() + thirdNote.GetHashCode() + fifthNote.GetHashCode();
+        return HashCode.Combine(rootNote, thirdNote, fifthNote);
     }
 
     public override bool Equals(System.Object other) {
@@ -32,5 +33,9 @@ public class Chords : ScriptableObject
             Chords otherChord = (Chords) other;
             return this.rootNote == otherChord.rootNote && this.thirdNote == otherChord.thirdNote && this.fifthNote == otherChord.fifthNote;
         }
+    }
+
+    public override string ToString() {
+        return rootNote.ToString() + " " + thirdNote.ToString() + " " + fifthNote.ToString();
     }
 }

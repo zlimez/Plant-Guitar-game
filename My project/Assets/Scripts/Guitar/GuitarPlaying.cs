@@ -88,7 +88,7 @@ public class GuitarPlaying : Guitar
         List<Notes> sortedNotes = new List<Notes>(notesPlayed.ToArray());
         sortedNotes.Sort();
         Chords rawChord = Chords.Of(sortedNotes[0], sortedNotes[1], sortedNotes[2]);
-        Debug.Log(sortedNotes[0] + " " + sortedNotes[1] + " " + sortedNotes[2]);
+        // Debug.Log(sortedNotes[0] + " " + sortedNotes[1] + " " + sortedNotes[2]);
         if (chordEventMapper.ContainsKey(rawChord)) {
             chordEventMapper[rawChord].TriggerEvent();
             notesPlayed.Clear();

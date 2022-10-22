@@ -16,10 +16,13 @@ public class BoardManager : MonoBehaviour
     }
 
     // Start is called before the first frame update
+    void Awake() {
+        alienDistribution = levelManager.generateAlienDistribution();
+    }
+    
     void Start() {
         LevelManager.StartTimer();
         timeInterval = levelManager.GetNextSpawnInterval();
-        alienDistribution = levelManager.generateAlienDistribution();
     }
 
     // Update is called once per frame

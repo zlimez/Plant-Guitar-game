@@ -18,6 +18,7 @@ public class Movement : MonoBehaviour
     // No concave geometry therefore should never move up
     void FixedUpdate() {
         if (Physics2D.Raycast(transform.position, moveDirection, 0.5f)) {
+            Debug.Log(gameObject.name + " has obstacle in front");
             // Need to turn
             if (moveDirection == Vector3.down) {
                 if (BoardManager.isRightHalf(transform.position.x)) {

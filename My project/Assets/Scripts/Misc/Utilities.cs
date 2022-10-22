@@ -7,4 +7,8 @@ public class Utilities
         TimeSpan diff = DateTime.Now - origin;
         return diff.TotalSeconds;
     }
+    
+    public static int NotesToIndex(Notes note) {
+        return (int) note - 1;
+    }
 }

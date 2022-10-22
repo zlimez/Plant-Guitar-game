@@ -9,9 +9,9 @@ public class GameEvent : ScriptableObject
     public void TriggerEvent() {
         Debug.Log(this.name + " triggered");
 
-        foreach (EventListener listener in listeners) {
-            Debug.Log(listener.gameObject.name);
-            listener.OnEventTriggered();
+        for (int i = 0; i < listeners.Count; i++) {
+            Debug.Log(listeners[i].gameObject.name);
+            listeners[i].OnEventTriggered();
         }
     }
 

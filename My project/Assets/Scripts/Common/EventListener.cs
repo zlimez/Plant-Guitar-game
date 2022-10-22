@@ -21,6 +21,12 @@ public class EventListener : MonoBehaviour
         }
     }
 
+    void OnDestroy() {
+        foreach (GameEvent gameEvent in gameEvents) {
+            gameEvent.RemoveListener(this);
+        }
+    }
+
     public void OnEventTriggered() {
         response.Invoke();
     }
