@@ -61,6 +61,10 @@ public class AliensGenerator
             wrappedAlien.Reset();
         }
 
+        if (candidateAliens.Count == 0) {
+            Debug.Log("No candidate found");
+        }
+
         return candidateAliens[UnityEngine.Random.Range(0, candidateAliens.Count)];
     }
 

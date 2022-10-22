@@ -10,13 +10,18 @@ public class Health : MonoBehaviour
         if (healthBar != null) {
             healthBar.SetMaxValue(health);
             healthBar.SetValue(health);
+        } else {
+            Debug.Log(gameObject.name);
         }
     }
 
     public void deductHealth(float amount) {
         health = Mathf.Max(health -= amount, 0);
-        if (healthBar != null)
-        healthBar.SetValue(health);
+        if (healthBar != null) {
+            healthBar.SetValue(health); 
+        } else {
+            Debug.Log(gameObject.name);
+        }
         if (health == 0) {
             // death.TriggerEvent();
             if (gameObject.CompareTag("Enemy")) {
