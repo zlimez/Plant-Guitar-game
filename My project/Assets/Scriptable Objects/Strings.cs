@@ -9,4 +9,18 @@ public class Strings : ScriptableObject
     public AudioClip clip;
     public Sprite image;
     public GameEvent NotePlayed;
+
+    // Every string has a unique note less future aesthetic consideration where multiple visually distinct strings play same note
+    public override bool Equals(object other) {
+        if ((other == null) || ! this.GetType().Equals(other.GetType())) {
+            return false;
+        } else {
+            Strings otherString = (Strings) other;
+            return this.note == otherString.note;
+        }
+    }
+
+    public override int GetHashCode() {
+        return note.GetHashCode();
+    }
 }

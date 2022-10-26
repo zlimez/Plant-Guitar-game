@@ -7,13 +7,17 @@ public class PlantItem : MonoBehaviour
 {
     public Image plantRenderer;
     public TextMeshProUGUI nameHolder;
-    public TextMeshProUGUI tensionHolder;
-    public TextMeshProUGUI stockHolder;
+    public PlantWrapper plant;
+    public static PlantItemDetailPanel plantItemDetailsPanel;
 
     public void AssignPlant(PlantWrapper plant) {
         nameHolder.SetText(plant.GetPlantName());
-        tensionHolder.SetText("Tension: " + plant.GetPlantTension());
-        stockHolder.SetText("Stock: " + plant.stock);
         plantRenderer.sprite = plant.GetPlantSprite();
+        this.plant = plant;
+    }
+
+    public void OpenPanel() {
+        plantItemDetailsPanel.SetPlant(plant);
+        plantItemDetailsPanel.gameObject.SetActive(true);
     }
 }

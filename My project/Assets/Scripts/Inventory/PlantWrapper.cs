@@ -2,15 +2,14 @@ using UnityEngine;
 
 public class PlantWrapper : Countable<Plant>
 {
-    public static StringInventory stringsInventory;
-    public PlantWrapper(Plant plant, int stock) : base(stock) {
-        this.data = plant;
-    }
+    public static Inventory<StringWrapper, Strings> stringsInventory;
+    public static PlantConverter plantConverter;
+    public PlantWrapper(Plant plant, int stock) : base(plant, stock) {}
 
     public override bool UseStock() {
         bool noneLeft = base.UseStock();
-        Strings convertedString = PlantConverter.ConvertPlantToString(data);
-        stringsInventory.AddExistingItem(convertedString);
+        Strings convertedString = plantConverter.ConvertPlantToString(data);
+        stringsInventory.AddItem(convertedString);
         return noneLeft;
     }
 

@@ -5,7 +5,8 @@ public class Countable<U>
     public U data;
     public int stock;
 
-    public Countable(int stock) {
+    public Countable(U data, int stock) {
+        this.data = data;
         this.stock = stock;
     }
 

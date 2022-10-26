@@ -46,7 +46,6 @@
      <Compile Include="Assets/Scriptable Objects/Notes.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexShakeB.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/EnvMapAnimator.cs" />
-     <Compile Include="Assets/Scripts/Inventory/StringInventory.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/CameraController.cs" />
      <Compile Include="Assets/Scriptable Objects/Strings.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMPro_InstructionOverlay.cs" />
@@ -79,7 +78,7 @@
      <Compile Include="Assets/Scripts/Character/HealthBar.cs" />
      <Compile Include="Assets/Scripts/LevelManager.cs" />
      <Compile Include="Assets/Scripts/Inventory/StringWrapper.cs" />
-     <Compile Include="Assets/Scripts/Inventory/PlantInventory.cs" />
+     <Compile Include="Assets/Scripts/Inventory/PlantInventoryUI.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_UiFrameRateCounter.cs" />
      <Compile Include="Assets/Scripts/Rhythm/BlobGenerator.cs" />
      <Compile Include="Assets/Scripts/Rhythm/BlobBin.cs" />
@@ -106,6 +105,10 @@
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexZoom.cs" />
      <Compile Include="Assets/Scripts/Misc/Utilities.cs" />
      <Compile Include="Assets/Scripts/Common/EventListener.cs" />
+     <Compile Include="Assets/Scripts/Inventory/StringInventoryUI.cs" />
+     <Compile Include="Assets/Scripts/Inventory/PlantItemDetailPanel.cs" />
+     <Compile Include="Assets/Scripts/InventoryManager.cs" />
+     <Compile Include="Assets/Scripts/Inventory/InventoryUI.cs" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader" />
