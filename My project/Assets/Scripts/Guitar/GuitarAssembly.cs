@@ -6,7 +6,7 @@ public class GuitarAssembly : Guitar
     
     public void SelectString(int index) {
         selectedString = index;
-        if (stringObjects[selectedString] == null) {
+        if (strings[selectedString] == null) {
             prepareToAddString.TriggerEvent();
         } else {
             prepareToRemoveString.TriggerEvent();
@@ -16,12 +16,13 @@ public class GuitarAssembly : Guitar
     public void AddString(Strings guitarString) {
         strings[selectedString] = guitarString;
         stringObjects[selectedString].GetComponent<StringPlucker>().AssignString(guitarString);
-        // Deselect
-        selectedString = -1;
+        // A string is attached at this index since not deselected it can be removed again.
+        prepareToRemoveString.TriggerEvent();
     }
 
-    public void RemoveString() {
+    public Strings RemoveString() {
         strings[selectedString] = null;
-        stringObjects[selectedString].GetComponent<StringPlucker>().RemoveString();
+        prepareToAddString.TriggerEvent();
+        return stringObjects[selectedString].GetComponent<StringPlucker>().RemoveString();
     }
 }

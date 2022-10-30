@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class InventoryManager : MonoBehaviour
 {
+    public static bool isAddStringState;
     public PlantInventoryUI plantInventoryUI;
     public StringInventoryUI stringInventoryUI;
     public PlantItemDetailPanel converterPanel;
     public PlantConverter plantConverter;
+    public GuitarAssembly assembly;
 
     // Dummy data
     public Plant[] dummyPlants;
@@ -42,6 +44,12 @@ public class InventoryManager : MonoBehaviour
         PlantWrapper.stringsInventory = stringInventory;
         PlantWrapper.plantConverter = plantConverter;
         PlantItemDetailPanel.plantInventory = plantInventory;
-        // plantInventoryUI.InitInventoryUI(plantInventory);
+
+        StringItem.stringInventory = stringInventory;
+        StringWrapper.assembly = assembly;
+    }
+
+    public void ChangeState(bool changedState) {
+        isAddStringState = changedState;
     }
 }

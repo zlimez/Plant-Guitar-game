@@ -32,6 +32,9 @@ public class Inventory<T, U> where T : Countable<U>
     }
 
     public void UseExistingItem(U itemData) {
+        if (itemDict.ContainsKey(itemData)) {
+            Debug.Log("Item exists");
+        }
         bool noneLeft = itemDict[itemData].UseStock();
         if (noneLeft) {
             items.Remove(itemDict[itemData]);

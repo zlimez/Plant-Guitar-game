@@ -17,4 +17,8 @@ public class StringWrapper : Countable<Strings>
     public Sprite GetStringSprite() {
         return data.image;
     }
+
+    public Sprite GetStringIcon() {
+        return data.icon;
+    }
 }

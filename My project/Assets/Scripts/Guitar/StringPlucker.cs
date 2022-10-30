@@ -18,8 +18,10 @@ public class StringPlucker : MonoBehaviour
         stringRenderer.sprite = assignedString.image;
     }
 
-    public void RemoveString() {
+    public Strings RemoveString() {
+        Strings removedString = this.thisString;
         this.thisString = null;
         stringRenderer.sprite = null;
+        return removedString;
     }
 }

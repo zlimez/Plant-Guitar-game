@@ -36,6 +36,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets/Scripts/InventoryManager.cs" />
      <Compile Include="Assets/Scripts/Inventory/Countable.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextSelector_A.cs" />
      <Compile Include="Assets/Scriptable Objects/Plant.cs" />
@@ -74,6 +75,7 @@
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark01_UGUI.cs" />
      <Compile Include="Assets/Scriptable Objects/AlienDistribution.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark04.cs" />
+     <Compile Include="Assets/Scripts/Inventory/PlantItemDetailPanel.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/ChatController.cs" />
      <Compile Include="Assets/Scripts/Character/HealthBar.cs" />
      <Compile Include="Assets/Scripts/LevelManager.cs" />
@@ -100,15 +102,13 @@
      <Compile Include="Assets/Scripts/Guitar/GuitarAssembly.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_FrameRateCounter.cs" />
      <Compile Include="Assets/Scripts/Guitar/StringPlucker.cs" />
+     <Compile Include="Assets/Scripts/Inventory/StringInventoryUI.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextSelector_B.cs" />
+     <Compile Include="Assets/Scripts/Inventory/InventoryUI.cs" />
      <Compile Include="Assets/Scripts/Inventory/Inventory.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexZoom.cs" />
      <Compile Include="Assets/Scripts/Misc/Utilities.cs" />
      <Compile Include="Assets/Scripts/Common/EventListener.cs" />
-     <Compile Include="Assets/Scripts/Inventory/StringInventoryUI.cs" />
-     <Compile Include="Assets/Scripts/Inventory/PlantItemDetailPanel.cs" />
-     <Compile Include="Assets/Scripts/InventoryManager.cs" />
-     <Compile Include="Assets/Scripts/Inventory/InventoryUI.cs" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader" />

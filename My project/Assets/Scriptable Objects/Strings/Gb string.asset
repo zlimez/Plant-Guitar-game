@@ -15,4 +15,5 @@ MonoBehaviour:
   note: 10
   clip: {fileID: 8300000, guid: 052b5c8d559a442f6839ec10bd63b376, type: 3}
   image: {fileID: -1873831571, guid: 59e4381b91e954548b6ec79d7f7f6ad1, type: 3}
+  icon: {fileID: 21300000, guid: 1fa5af187d8984d9a913adb36244f327, type: 3}
   NotePlayed: {fileID: 11400000, guid: 204a811e8b75f4201a79fd650547d1f3, type: 2}
