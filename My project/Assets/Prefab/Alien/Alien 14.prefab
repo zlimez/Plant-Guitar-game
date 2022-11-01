@@ -482,6 +482,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8fbbdbeb27ba49ac9a49d89e7a35a2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  alienCodeName: X05
   weakness: {fileID: 11400000, guid: 8bfb907deed534ed1a52e7505902cea9, type: 2}
   attackStats: 10
   health: {fileID: 407234667904373609}

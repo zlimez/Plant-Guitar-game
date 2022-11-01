@@ -8,7 +8,7 @@ public class BlobGenerator : MonoBehaviour
     public float timeInterval;
     // Introduce some irregularity to blob intervals
     public float uncertainty;
-    public LevelManager levelManager;
+    public Timer timer;
     // Rhythm blob (Cytus, 太鼓達人)
     public GameObject blob;
     // Start is called before the first frame update
@@ -30,7 +30,7 @@ public class BlobGenerator : MonoBehaviour
     }
     
     private void GenerateNextInterval() {
-        float meanInterval = levelManager.GetNextSpawnInterval();
+        float meanInterval = timer.GetNextSpawnInterval();
         timeInterval = Random.Range(meanInterval * (1 - uncertainty), meanInterval * (1 + uncertainty));
     }
 }

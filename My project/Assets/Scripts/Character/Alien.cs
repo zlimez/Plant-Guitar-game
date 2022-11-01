@@ -4,6 +4,7 @@ using UnityEngine;
 public class Alien : MonoBehaviour
 {
     // Every alien has a unique weakness
+    public string alienCodeName;
     public Weakness weakness;
     public float attackStats;
     public Health health;

@@ -9,20 +9,16 @@ public class BoardManager : MonoBehaviour
     public float[] columns;
     public float timeInterval;
     public AlienDistribution alienDistribution;
-    public LevelManager levelManager;
+    public Timer timer;
 
     public static bool isRightHalf(float y) {
         return y >= 0;
     }
 
-    // Start is called before the first frame update
-    void Awake() {
-        alienDistribution = levelManager.generateAlienDistribution();
-    }
-    
     void Start() {
-        LevelManager.StartTimer();
-        timeInterval = levelManager.GetNextSpawnInterval();
+        alienDistribution = LevelManager.alienDistribution;
+        Timer.StartTimer();
+        timeInterval = timer.GetNextSpawnInterval();
     }
 
     // Update is called once per frame
@@ -30,7 +26,7 @@ public class BoardManager : MonoBehaviour
     {
         if (timeInterval <= 0) {
             SpawnAlien();
-            timeInterval = levelManager.GetNextSpawnInterval();
+            timeInterval = timer.GetNextSpawnInterval();
             // Debug.Log("Spawn interval: " + timeInterval);
         } else {
             timeInterval -= Time.deltaTime;
