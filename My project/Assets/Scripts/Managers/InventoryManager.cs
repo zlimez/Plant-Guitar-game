@@ -7,15 +7,12 @@ public class InventoryManager : MonoBehaviour
     public static bool isAddStringState;
     public PlantInventoryUI plantInventoryUI;
     public StringInventoryUI stringInventoryUI;
+    public Inventory<StringWrapper, Strings> stringInventory;
+    public Inventory<PlantWrapper, Plant> plantInventory;
     public PlantItemDetailPanel converterPanel;
     public PlantConverter plantConverter;
     public GuitarAssembly assembly;
 
-    // Dummy data
-    public Plant[] dummyPlants;
-    public int[] dummyPlantStocks;
-    public Strings[] dummyStrings;
-    public int[] dummyStringStocks;
 
     void Start() {
         InitInventory();
@@ -25,16 +22,17 @@ public class InventoryManager : MonoBehaviour
     public void InitInventory() {
         List<PlantWrapper> plantItems = new List<PlantWrapper>();
         List<StringWrapper> stringItems = new List<StringWrapper>();
-        for (int i = 0; i < dummyPlantStocks.Length; i++) {
-            plantItems.Add(new PlantWrapper(dummyPlants[i], dummyPlantStocks[i]));
+        GameManager gameManager = GameManager.instance;
+        for (int i = 0; i < gameManager.dummyPlantStocks.Length; i++) {
+            plantItems.Add(new PlantWrapper(gameManager.dummyPlants[i], gameManager.dummyPlantStocks[i]));
         }
 
-        for (int i = 0; i < dummyStrings.Length; i++) {
-            stringItems.Add(new StringWrapper(dummyStrings[i], dummyStringStocks[i]));
+        for (int i = 0; i < gameManager.dummyStrings.Length; i++) {
+            stringItems.Add(new StringWrapper(gameManager.dummyStrings[i], gameManager.dummyStringStocks[i]));
         }
 
-        Inventory<PlantWrapper, Plant> plantInventory = new Inventory<PlantWrapper, Plant>();
-        Inventory<StringWrapper, Strings> stringInventory = new Inventory<StringWrapper, Strings>();
+        plantInventory = new Inventory<PlantWrapper, Plant>();
+        stringInventory = new Inventory<StringWrapper, Strings>();
         plantInventory.inventoryUI = plantInventoryUI;
         stringInventory.inventoryUI = stringInventoryUI;
         plantInventory.SetItems(plantItems);
@@ -52,5 +50,10 @@ public class InventoryManager : MonoBehaviour
 
     public void ChangeState(bool changedState) {
         isAddStringState = changedState;
+    }
+
+    // Triggered by scene change event
+    public void StoreInventoryStatus() {
+        GameManager.instance.SaveInventoryStatus(this);
     }
 }

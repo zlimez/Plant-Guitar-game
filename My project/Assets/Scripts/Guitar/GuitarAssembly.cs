@@ -31,4 +31,9 @@ public class GuitarAssembly : Guitar
         prepareToAddString.TriggerEvent();
         stringObjects[selectedString].GetComponent<StringPlucker>().RemoveString();
     }
+
+    // Triggered by scene change to main stage
+    public void SaveGuitarConfig() {
+        GameManager.instance.SaveGuitarConfig(this);
+    }
 }

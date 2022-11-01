@@ -45,4 +45,8 @@ public class Inventory<T, U> where T : Countable<U>
             inventoryUI.UpdateItem(itemDict[itemData]);
         }
     }
+
+    public List<T> GetItems() {
+        return items;
+    }
 }

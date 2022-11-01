@@ -23,8 +23,9 @@ public class GuitarPlaying : Guitar
     }
 
     void Start() {
-        // this.strings = GameManager.STRINGS;
-        for (int i = 0; i < GameManager.STRINGS.Length; i++) {
+        // Result of building the guitar in assembly stage
+        this.strings = GameManager.instance.strings;
+        for (int i = 0; i < strings.Length; i++) {
             stringObjects[i].GetComponent<StringPlucker>().AssignString(strings[i]);
         }
     }
