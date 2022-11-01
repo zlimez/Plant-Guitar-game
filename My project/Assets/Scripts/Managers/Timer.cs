@@ -6,10 +6,14 @@ public class Timer : MonoBehaviour
 {
     public static bool TIMER_START;
     private static float TIME_PASSED = 0;
-    public float levelDuration = 240;
+    public float levelDuration = 120;
     public float initialSpawnInterval = 2;
-    public float climaxSpawnInterval = 0.2f;
+    public float climaxSpawnInterval = 0.5f;
     public GameEvent levelComplete;
+
+    void Start() {
+        ResetTimer();
+    }
 
     // Start is called before the first frame update
     void Update()

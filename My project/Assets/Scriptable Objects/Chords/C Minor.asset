@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: C Minor
   m_EditorClassIdentifier: 
   rootNote: 1
-  thirdNote: 9
-  fifthNote: 5
+  thirdNote: 5
+  fifthNote: 9

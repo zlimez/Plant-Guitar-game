@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5471d03b404a343919e575ce40132bb9, type: 3}
   m_Name: B Minor
   m_EditorClassIdentifier: 
-  rootNote: 7
-  thirdNote: 2
+  rootNote: 2
+  thirdNote: 7
   fifthNote: 10

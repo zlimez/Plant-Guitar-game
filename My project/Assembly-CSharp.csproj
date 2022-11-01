@@ -111,6 +111,7 @@
      <Compile Include="Assets/Scripts/Common/EventListener.cs" />
      <Compile Include="Assets/Scripts/Report/Intelitem.cs" />
      <Compile Include="Assets/Scripts/Managers/Timer.cs" />
+     <Compile Include="Assets/Scripts/Managers/SceneChanger.cs" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader" />

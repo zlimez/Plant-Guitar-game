@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Guitar : MonoBehaviour
 {
+    public static int numOfStrings = 6;
     // The field is by right not necessary only to make null check in PlayString more convenient
     public Strings[] strings;
     public GameObject[] stringObjects;

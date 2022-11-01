@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: E Major
   m_EditorClassIdentifier: 
   rootNote: 3
-  thirdNote: 11
-  fifthNote: 7
+  thirdNote: 7
+  fifthNote: 11

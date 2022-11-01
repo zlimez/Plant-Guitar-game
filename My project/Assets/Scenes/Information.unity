@@ -152,6 +152,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a93b6b0369cad48ac875c61915b25acd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  strings: []
+  dummyPlants:
+  - {fileID: 11400000, guid: 45d647466fe8941d8b31268c5f67b726, type: 2}
+  - {fileID: 11400000, guid: ae47c8e8f6fb8459abdfd5136ebd1c59, type: 2}
+  - {fileID: 11400000, guid: 429e88196b8f640388f9415211b208b8, type: 2}
+  - {fileID: 11400000, guid: 7543ec42a82004305b436762af58ead3, type: 2}
+  - {fileID: 11400000, guid: 9fb192322c8d642d097f2512e8870da8, type: 2}
+  - {fileID: 11400000, guid: 66a3d99f5f2ab4483b346152a4f1cfcf, type: 2}
+  dummyPlantStocks: 050000000600000004000000080000000300000002000000
+  dummyStrings:
+  - {fileID: 11400000, guid: 2111c5c53ba9e44649e9a515047b8238, type: 2}
+  - {fileID: 11400000, guid: 9c7897c4501b84bc4bcc60c4dc104bc2, type: 2}
+  - {fileID: 11400000, guid: cb71ba910c5444fabbec3e94ddc667e3, type: 2}
+  - {fileID: 11400000, guid: 9579625b1a98e47b2ba465e810c794ea, type: 2}
+  - {fileID: 11400000, guid: eda605a7108634f839233f88be055289, type: 2}
+  - {fileID: 11400000, guid: de3b2f702a61145499ddd70a02459396, type: 2}
+  - {fileID: 11400000, guid: 68ee25348e797451eb57fe16ff7184b4, type: 2}
+  - {fileID: 11400000, guid: 764262a128274403fb50b9eb2da88c42, type: 2}
+  - {fileID: 11400000, guid: 6a5a77ca6bea046bf87d2c6a9afe2761, type: 2}
+  - {fileID: 11400000, guid: fc1d3543a1edd4fbb9bc8e03627e732a, type: 2}
+  - {fileID: 11400000, guid: 9e12f7109c07148da80ec781462893d5, type: 2}
+  - {fileID: 11400000, guid: 046cf2c6ecf244ff3aaa750a5608c318, type: 2}
+  dummyStringStocks: 050000000500000005000000050000000500000005000000050000000500000005000000050000000500000005000000
 --- !u!4 &210373487
 Transform:
   m_ObjectHideFlags: 0
@@ -729,7 +752,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 800520989}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1101394491}
+        m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
+        m_MethodName: ChangeScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &800520989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1038,6 +1073,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1080352923}
   m_CullTransparentMesh: 1
+--- !u!1 &1101394490
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1101394492}
+  - component: {fileID: 1101394491}
+  m_Layer: 0
+  m_Name: Scene Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1101394491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101394490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e62782cfdda8744b3bc01404c55ea46f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  changeScene: {fileID: 11400000, guid: 4819728bd185544fdb1c7217a13521b8, type: 2}
+  sceneIndex: 1
+--- !u!4 &1101394492
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101394490}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.73143214, y: 0.52190053, z: -0.1862922}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1159891384
 GameObject:
   m_ObjectHideFlags: 0

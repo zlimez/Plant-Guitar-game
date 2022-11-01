@@ -88,6 +88,7 @@ public class GuitarPlaying : Guitar
         // From the notes played in the last interval determine the chord played an emit the corresponding event
         List<Notes> sortedNotes = new List<Notes>(notesPlayed.ToArray());
         sortedNotes.Sort();
+        Debug.Log(sortedNotes[0] + " " + sortedNotes[1] + " " + sortedNotes[2]);
         Chords rawChord = Chords.Of(sortedNotes[0], sortedNotes[1], sortedNotes[2]);
         // Debug.Log(sortedNotes[0] + " " + sortedNotes[1] + " " + sortedNotes[2]);
         if (chordEventMapper.ContainsKey(rawChord)) {

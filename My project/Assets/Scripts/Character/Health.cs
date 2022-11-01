@@ -20,9 +20,11 @@ public class Health : MonoBehaviour
         if (healthBar != null) {
             healthBar.SetValue(health); 
         } 
-        
+
         if (health == 0) {
-            // death.TriggerEvent();
+            if (death != null) {
+                death.TriggerEvent();
+            }
             if (gameObject.CompareTag("Enemy")) {
                 Destroy(gameObject);
             }
