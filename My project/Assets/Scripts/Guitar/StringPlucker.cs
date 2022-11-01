@@ -18,10 +18,11 @@ public class StringPlucker : MonoBehaviour
         stringRenderer.sprite = assignedString.image;
     }
 
-    public Strings RemoveString() {
-        Strings removedString = this.thisString;
+    public void RemoveString() {
+        if (this.thisString == null) {
+            Debug.Log("An empty string should not be able to be removed");
+        }
         this.thisString = null;
         stringRenderer.sprite = null;
-        return removedString;
     }
 }

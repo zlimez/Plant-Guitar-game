@@ -11,7 +11,7 @@ public class Health : MonoBehaviour
             healthBar.SetMaxValue(health);
             healthBar.SetValue(health);
         } else {
-            Debug.Log(gameObject.name);
+            Debug.Log(gameObject.name + " has no health bar");
         }
     }
 
@@ -19,9 +19,8 @@ public class Health : MonoBehaviour
         health = Mathf.Max(health -= amount, 0);
         if (healthBar != null) {
             healthBar.SetValue(health); 
-        } else {
-            Debug.Log(gameObject.name);
-        }
+        } 
+        
         if (health == 0) {
             // death.TriggerEvent();
             if (gameObject.CompareTag("Enemy")) {

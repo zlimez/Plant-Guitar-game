@@ -13,7 +13,7 @@ public class Alien : MonoBehaviour
     }
 
     public void reactToAttack(bool isMajor) {
-        Debug.Log(gameObject.name + " health deducted");
+        // Debug.Log(gameObject.name + " health deducted");
         if (isMajor) {
             health.deductHealth(weakness.majorHealthDeduction);
         } else {

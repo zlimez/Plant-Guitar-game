@@ -19,9 +19,8 @@ public class StringItem : MonoBehaviour
 
     // Triggered by OnClick()
     public void ApplyString() {
-        Debug.Log("Tries to apply string");
         if (InventoryManager.isAddStringState) {
-            Debug.Log("Can apply string");
+            // Debug.Log("Can apply string");
             stringInventory.UseExistingItem(wrappedString.data);
         }
     }

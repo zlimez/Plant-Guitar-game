@@ -4,6 +4,9 @@ public class PlantWrapper : Countable<Plant>
 {
     public static Inventory<StringWrapper, Strings> stringsInventory;
     public static PlantConverter plantConverter;
+
+    public PlantWrapper() : base() {}
+    
     public PlantWrapper(Plant plant, int stock) : base(plant, stock) {}
 
     public override bool UseStock() {

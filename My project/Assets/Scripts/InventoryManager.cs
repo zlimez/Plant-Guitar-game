@@ -47,6 +47,7 @@ public class InventoryManager : MonoBehaviour
 
         StringItem.stringInventory = stringInventory;
         StringWrapper.assembly = assembly;
+        GuitarAssembly.stringsInventory = stringInventory;
     }
 
     public void ChangeState(bool changedState) {

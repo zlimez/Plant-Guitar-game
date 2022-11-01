@@ -1,5 +1,8 @@
+using UnityEngine;
+
 public class GuitarAssembly : Guitar
 {
+    public static Inventory<StringWrapper, Strings> stringsInventory;
     public GameEvent prepareToAddString;
     public GameEvent prepareToRemoveString;
     public int selectedString = -1;
@@ -20,9 +23,12 @@ public class GuitarAssembly : Guitar
         prepareToRemoveString.TriggerEvent();
     }
 
-    public Strings RemoveString() {
+    public void RemoveString() {
+        Debug.Log("Removing " + selectedString);
+        Strings removedString = strings[selectedString];
+        stringsInventory.AddItem(removedString);
         strings[selectedString] = null;
         prepareToAddString.TriggerEvent();
-        return stringObjects[selectedString].GetComponent<StringPlucker>().RemoveString();
+        stringObjects[selectedString].GetComponent<StringPlucker>().RemoveString();
     }
 }

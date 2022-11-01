@@ -3,6 +3,8 @@ using UnityEngine;
 public class StringWrapper : Countable<Strings>
 {
     public static GuitarAssembly assembly;
+
+    public StringWrapper() : base() {}
     public StringWrapper(Strings thisString, int stock) : base(thisString, stock) {}
 
     public override bool UseStock() {
