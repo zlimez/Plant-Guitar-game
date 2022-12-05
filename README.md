@@ -1,27 +1,18 @@
-# Open-Ended Plant Minigame
+## Game Concept
 
-## :information_source: Introduction
-This is an open-ended task which tests your game development skills across the spectrum of game design, coding, and even working with art and assets. As you may know, Floramis is a startup that aims to turn plants into social experiences. One of the ways we do this is through minigames which tie into the idea of gamifying plant care.
+In the mini game, the player aim to repel alien invasion with their one and only guitar. In this postapocalyptic world, there is no access to metal and 
+hence no copper strings. As a substitute, players have to harvest the plants in game and use their fibers to create strings of different tension and assemble a playable guitar. 
 
-## :dart: Task
-Your task is to develop *any* plant-related Unity minigame that you deem would be interesting and engaging for users of the Floramis app. This game should have a short but engaging gameplay loop that ensures replayability. Given that this is quite an open-ended task, we do not expect you to create original assets and SFX so please feel free to use existing asset libraries on the web ([example](https://www.kenney.nl/)) or on the Unity asset store to create this game. Due to the short timespan of this task, try to focus your efforts on functionality over form. Otherwise, let your creativity shine through using this project!
+**Preparation**
 
-## :package: Resources/Assets Allowed
-You are allowed to use as many or as little external resources as you require. However, you must:
-- Document which external resources you're using in this README
-- Be able to explain how your external library/asset works
-- Explain why you chose this external library/asset and its pros and cons
+There are various alien species and each of them are vulnerable to different chords. Before each battle, the player will receive intel report on the makeup 
+of the next wave of aliens. Correspondingly, they will need to determine the best note combination for their guitar that can effectively strike the 
+weakness of the enemy.
 
-## :thinking: What We're Looking For:
-- Clean, modular coding style which allows for extensibility and easy integration with other external modules or API.
-- Your ability to reason about your code and explain your design decisions & engineering choices during the review presentation.
-- While visual flair is not required, more polished visuals are always appreciated.
-- It is completely fine if you are not able to complete this problem to a 100% finished state. The main things we are looking for are a demonstrated ability to write code in a clean and modular way, while also paying attention to code optimality and performance.
+**Arena**
 
-## :page_with_curl:	Submission & Setup Instructions
-1. Fork this repository into your own GitHub profile.
-2. Clone your fork.
-3. You may commit your code to this fork as often as you need.
-4. When you have completed the project, reply to the original email with a link to your fork.
+After assembling the right guitar, the player will face yet another challenge during the actual combat. Playing the right chords is not enough to harm the aliens. The timing matters as well, chords will only be considered as an attack if it is played when the hexagonal blob is above the pinkish lane.
 
-For information on the deadline for your submission, please refer to our email which linked you to this repository.
+**_Todo_**
+
+- Farm where player can use to grow their plants is not completed yet.
