@@ -1,4 +1,6 @@
-## Game Concept
+# Guitar VS Alien
+
+## Synopsis
 
 In the mini game, the player aim to repel alien invasion with their one and only guitar. In this postapocalyptic world, there is no access to metal and 
 hence no copper strings. As a substitute, players have to harvest the plants in game and use their fibers to create strings of different tension and assemble a playable guitar. 
